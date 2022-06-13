@@ -48,6 +48,11 @@ namespace KSModTemplate
 
         public void PerformCmd(CommandInfo Command, string Args = "")
         {
+            // --------------------------------------------------------------------------------------------------------------------------------------
+            // WARNING: This routine is deprecated and will be removed in the next API revision, v2.1. Please refrain from using this and start using
+            //          separate classes implementing both CommandExecutor and ICommand for commands. See below for an example.
+            // --------------------------------------------------------------------------------------------------------------------------------------
+            //
             // Here you can write statements about what happens when a mod command is executed. Arguments is a string literal, so you might have
             // to split them yourself.
             //
@@ -60,6 +65,11 @@ namespace KSModTemplate
             //     default:
             //         break;
             // }
+            //
+            // --------------------------------------------------------------------------------------------------------------------------------------
+            // WARNING: This routine is deprecated and will be removed in the next API revision, v2.1. Please refrain from using this and start using
+            //          separate classes implementing both CommandExecutor and ICommand for commands. See below for an example.
+            // --------------------------------------------------------------------------------------------------------------------------------------
         }
 
         public void StartMod()
@@ -72,10 +82,13 @@ namespace KSModTemplate
             // Name = "ModName";
             // ModPart = "Main";
             // Version = "1.0.0";
-            // Commands = new Dictionary<string, CommandInfo> { { "command", new CommandInfo("command", ShellType.Shell, "Define the command here", new[] { "<RequiredArgument> [OptionalArgument]" }, true, 1, null) },
-            //                                                  { "command2", new CommandInfo("command2", ShellType.Shell, "Define the second command here", new[] { "<RequiredArgument> [OptionalArgument]" }, true, 1, null) }, };
+            // Commands = new Dictionary<string, CommandInfo> { { "command", new CommandInfo("command", ShellType.Shell, "Define the command here", new[] { "<RequiredArgument> [OptionalArgument]" }, true, 1, new Command()) },
+            //                                                  { "command2", new CommandInfo("command2", ShellType.Shell, "Define the second command here", new[] { "<RequiredArgument> [OptionalArgument]" }, true, 1, new Command2()) }, };
             //
-            // Leave CommandBase null for now; it'll be changed later in upcoming releases.
+            // To create a new CommandExecutor for your commands, create a class named after your command. For example, if we have "command" here, you need to create a class named "Command". This will create a new file called "Command.cs"
+            // where you can implement both CommandExecutor and ICommand. See "Command.cs" in this template for an example implementation.
+            //
+            // Examples are found at https://github.com/EoflaOE/KSModExamples
         }
 
         public void StopMod()
