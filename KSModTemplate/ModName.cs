@@ -3,7 +3,7 @@
 // mod code.
 
 using KS.Modifications;
-using KS.Shell.ShellBase;
+using KS.Shell.ShellBase.Commands;
 using System.Collections.Generic;
 
 namespace KSModTemplate
@@ -44,32 +44,6 @@ namespace KSModTemplate
             //     default:
             //         break;
             // }
-        }
-
-        public void PerformCmd(CommandInfo Command, string Args = "")
-        {
-            // --------------------------------------------------------------------------------------------------------------------------------------
-            // WARNING: This routine is deprecated and will be removed in the next API revision, v2.1. Please refrain from using this and start using
-            //          separate classes implementing both CommandExecutor and ICommand for commands. See below for an example.
-            // --------------------------------------------------------------------------------------------------------------------------------------
-            //
-            // Here you can write statements about what happens when a mod command is executed. Arguments is a string literal, so you might have
-            // to split them yourself.
-            //
-            // Compare the CommandInfo.Command property with one of your mod commands using the Switch..Case statement like this:
-            //
-            // switch (Command.Command)
-            // {
-            //     case "command":
-            //         break;
-            //     default:
-            //         break;
-            // }
-            //
-            // --------------------------------------------------------------------------------------------------------------------------------------
-            // WARNING: This routine is deprecated and will be removed in the next API revision, v2.1. Please refrain from using this and start using
-            //          separate classes implementing both CommandExecutor and ICommand for commands. See below for an example.
-            // --------------------------------------------------------------------------------------------------------------------------------------
         }
 
         public void StartMod()

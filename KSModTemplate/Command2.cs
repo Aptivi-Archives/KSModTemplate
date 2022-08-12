@@ -1,7 +1,7 @@
 ﻿
 // The KS.Shell.ShellBase import is necessary for the class implementation to work.
 
-using KS.Shell.ShellBase;
+using KS.Shell.ShellBase.Commands;
 
 namespace KSModTemplate
 {
