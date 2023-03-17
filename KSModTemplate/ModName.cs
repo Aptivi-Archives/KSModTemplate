@@ -62,7 +62,7 @@ namespace KSModTemplate
             // To create a new CommandExecutor for your commands, create a class named after your command. For example, if we have "command" here, you need to create a class named "Command". This will create a new file called "Command.cs"
             // where you can implement both CommandExecutor and ICommand. See "Command.cs" in this template for an example implementation.
             //
-            // Examples are found at https://github.com/EoflaOE/KSModExamples
+            // Examples are found at https://github.com/Aptivi/KSModExamples
         }
 
         public void StopMod()
